@@ -17,7 +17,7 @@
  * @subpackage config
  * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
  * @author     Sean Kerr <sean@code-box.org>
- * @version    SVN: $Id: sfFactoryConfigHandler.class.php 33299 2011-12-30 17:42:47Z fabien $
+ * @version    SVN: $Id: sfFactoryConfigHandler.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
 class sfFactoryConfigHandler extends sfYamlConfigHandler
 {
@@ -214,7 +214,7 @@ class sfFactoryConfigHandler extends sfYamlConfigHandler
                          "  %s"
                          , $class, var_export($parameters, true), $loggers);
           break;
-
+        /*
         case 'mailer':
           $instances[] = sprintf(
                         "require_once sfConfig::get('sf_symfony_lib_dir').'/vendor/swiftmailer/classes/Swift.php';\n".
@@ -223,6 +223,7 @@ class sfFactoryConfigHandler extends sfYamlConfigHandler
                         "\$this->setMailerConfiguration(array_merge(array('class' => sfConfig::get('sf_factory_mailer', '%s')), sfConfig::get('sf_factory_mailer_parameters', %s)));\n"
                          , $class, var_export($parameters, true));
           break;
+        */
       }
     }
 
